@@ -32,11 +32,11 @@ Javadoc は以下のリンクから。
 ここで、3 番目の条件は必須ではない。
 例えば、`BigDecimal` において
 
-* `BigDecimal(1.00) != BigDecimal(1.0)`
+* `BigDecimal("1.00") != BigDecimal("1.0")`
 
 だが、
 
-* `compareTo(BigDecimal(1.00), BigDecimal(1.0)) == 0`
+* `compareTo(BigDecimal("1.00"), BigDecimal("1.0")) == 0`
 
 である。
 ただし、この条件を破る `compareTo` を実装するならば、ドキュメントなどで明確に述べるべきである。
