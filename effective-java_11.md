@@ -32,9 +32,9 @@
 
 ```java
 public class Circle implements Cloneable {
-    private int x;
-	private int y;
-	private int radius;
+    private double x;
+	private double y;
+	private double radius;
 
     @Override public Circle clone() {
         try {
