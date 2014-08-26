@@ -19,11 +19,11 @@
 
 ```java
 public class Circle {
-    public int x;
-	public int y;
-	public int radius;
+    public double x;
+	public double y;
+	public double radius;
 
-    public Circle(int x, int y, int radius) {
+    public Circle(double x, double y, double radius) {
 	    //...
 	}
 
@@ -44,7 +44,7 @@ public class Circle {
 
 ```java
 Circle c = new Circle(0, 0, 1);    // 原点中心の単位円
-System.out.println(c);    // [Circle: x = 0, y = 0, radius = 1] と表示
+System.out.println(c);    // [Circle: x = 0.0, y = 0.0, radius = 1.0] と表示
 ```
 
 ## その他
