@@ -107,7 +107,7 @@ class StringLengthComparator {
 * [Strategy パターン - Wikipedia](http://ja.wikipedia.org/wiki/Strategy_%E3%83%91%E3%82%BF%E3%83%BC%E3%83%B3)
 
 `StringLengthComparator` は、具体的なアルゴリズムを表現している具象戦略である。
-これは stateless であるため、以下のようにシングルトンとして定義してもよい。
+これは stateless であるため、シングルトンとして定義してもよい。
 また、一度だけ利用されるときは、無名内部クラスとして宣言してもよい。
 
 複数の具象戦略を扱うためには、インタフェースを用いる必要がある。
