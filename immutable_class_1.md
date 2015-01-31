@@ -141,6 +141,8 @@ public final class Person {
 
 不変クラスの条件を守った ISBN のクラスを作ってみる。
 
+- [ISBN を例として不変クラスを作ってみる (1) - kymmt's note](http://kymmt90.hatenablog.com/entry/immutable_class_1)
+
 ## 参考文献
 
 [asin:4621066056:detail]
