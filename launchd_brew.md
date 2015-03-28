@@ -1,4 +1,12 @@
 <!-- launchd で Homebrew を自動アップデート -->
+---
+
+**追記：Yosemite 以降では以下の記事を参照してください。**
+
+- [launchd で Homebrew を自動アップデート（Yosemite 編） - kymmt's note](http://kymmt90.hatenablog.com/entry/launchd_brew_yosemite)
+
+---
+
 Homebrew を使っていて、たまに `brew doctor` すると、以下のメッセージが表示される。
 
     Warning: Your Homebrew is outdated.
