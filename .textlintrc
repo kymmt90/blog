@@ -1,0 +1,11 @@
+{
+    "rules": {
+        "preset-japanese": true,
+        "prh": {
+            "rulePaths": [
+				"prh_basic_rules.yml",
+                "./WEB+DB_PRESS.yml"
+            ]
+        }
+    }
+}
