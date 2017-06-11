@@ -43,6 +43,8 @@ ENV BUNDLE_GEMFILE=$APP_HOME/Gemfile \
 RUN bundle install
 ```
 
+（※後述の［追記］も参照してください）
+
 これで、コンテナ内の `Gemfile` をあとから編集しても、`bundle install` が実行できます。
 
 ## `bundle install` に時間がかかる
@@ -81,6 +83,12 @@ https://github.com/docker-library/ruby/blob/752c5f7cf44870ceae77134b346d20093053
 ```
 $ docker-compose run app --rm bundle install
 ```
+
+### ［2017-06-11 追記］`bundle install` する場所について
+
+`bundle install` を `Dockerfile` に書くと、イメージのビルド時にインストールされたgemがイメージに入ります。この時点ではgemを保存するVolumeが設定されていないのですが、`docker-compose` コマンド経由でコンテナを起動すると、Volumeがgem保存先にマウントされます。このVolumeが上述の説明で使っている**名前付きボリューム**だと、マウント先に存在するファイルはVolumeへコピーされます(([Manage data in containers | Docker Documentation](https://docs.docker.com/engine/tutorials/dockervolumes/)))。
+
+しかし、コンテナ起動前後でgemの保存の仕組みが変わるのはわかりにくいです。`Dockerfile` 内に `bundle install` を書くのではなく `docker-compose run --rm app bundle install` のように明示的にVolumeへgemをインストールする、という方法のほうがわかりやすそうです。
 
 ## `rails`, `rake` コマンドの立ち上がりが遅い
 
